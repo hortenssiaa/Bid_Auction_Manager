@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hakyung.bnamgr.dao.MemberMapper">
+
+<insert id="insertMember" parameterType="member">
+	insert into BID_AUCTION_MGR (
+		member_id
+		, member_pw
+		, member_nm
+		, member_phone
+		, member_email
+		, member_gender
+		, member_profile
+	) values (
+		#{member_id}
+		, #{member_pw}
+		, #{member_nm}
+		, #{member_phone}
+		, #{member_email}
+		, #{member_gender}
+		, #{member_profile}
+	)
+</insert>
+
+<select id="selectMember" parameterType="string" resultType="member">
+	select
+		member_id
+		, member_pw
+		, member_nm
+		, member_phone
+		, member_email
+		, member_gender
+		, member_profile
+		, member_indate
+		, member_savedfile
+		, member_originalfile
+	from
+		BID_AUCTION_MGR
+	where
+		member_id = #{member_id}
+</select>
+
+</mapper>

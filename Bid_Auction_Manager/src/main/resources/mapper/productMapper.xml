@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hakyung.bnamgr.dao.ProductMapper">
+
+<insert id="insertProduct" parameterType="product">
+	insert into bid_auction_mgr_product (
+		p_num
+		, p_kind
+		, p_min_price_op
+		, p_min_price
+		, max_party
+    	, member_id
+    	, p_name
+	) values (
+		bid_auction_mgr_seq.nextval
+		, #{p_kind}
+		, #{p_min_price_op}
+		, #{p_min_price}
+		, #{max_party}
+    	, #{member_id}
+    	, #{p_name}	
+	)
+</insert>
+
+</mapper>
