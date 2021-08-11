@@ -25,7 +25,8 @@
 			<c:otherwise>
 				<li><a href="/member/myAuctionPage">나의 경매 관리</a></li>				
 				<li><a href="/auction/insertProductForm">나의 경매 시작하기</a></li>				
-				<li><a href="/member/logout">로그아웃</a></li>				
+				<li><a href="/member/logout">로그아웃</a></li> <br>
+				<li><a href="/auction/getMPtest">시셰테스트</a></li>				
 			</c:otherwise>
 		</c:choose>
 	</ul>

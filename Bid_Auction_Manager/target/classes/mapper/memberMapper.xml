@@ -43,4 +43,23 @@
 		member_id = #{member_id}
 </select>
 
+<select id="selectMyProduct" parameterType="string" resultType="product">
+	select
+		p_num
+		, p_kind
+		, p_min_price
+		, max_party
+		, current_party
+    	, member_id
+    	, p_name
+    	, p_indate
+    	, p_min_price_op
+    	, product_savedfile
+    	, product_originalfile
+    from
+    	bid_auction_mgr_product
+    where
+    	member_id = #{member_id}
+</select>
+
 </mapper>

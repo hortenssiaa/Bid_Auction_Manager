@@ -1,13 +1,17 @@
 package com.hakyung.bnamgr.controller;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hakyung.bnamgr.service.MemberService;
 import com.hakyung.bnamgr.vo.MemberVO;
+import com.hakyung.bnamgr.vo.ProductVO;
 
 @Controller
 public class MemberController {
@@ -37,8 +41,16 @@ public class MemberController {
 	}
 
 	@RequestMapping(value = "/member/myAuctionPage" , method = RequestMethod.GET)
-	public String myAuctionPage() {
+	public String myAuctionPage(Model model) {
+		ArrayList<ProductVO> productList = service.selectMyProduct();
+		model.addAttribute("productList", productList);
+		
 		return "/member/myAuctionPage";
+	}
+
+	@RequestMapping(value = "/member/logout" , method = RequestMethod.GET)
+	public String logout() {
+		return service.logout();
 	}
 
 }

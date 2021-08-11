@@ -52,10 +52,6 @@
 <body>
 	<h1>[ 경매상품 등록하기 ]</h1>
 	
-	<!-- 
-		, p_min_price, max_party, current_party;
-	 -->
-	
 	<form action="/product/insertProduct" method="post" onsubmit="return checkForm();">
 		<input type="hidden" name="member_id" value="${sessionScope.loginID }">
 		<table border="1">

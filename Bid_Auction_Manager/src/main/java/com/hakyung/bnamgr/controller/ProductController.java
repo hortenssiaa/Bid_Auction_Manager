@@ -23,4 +23,9 @@ public class ProductController {
 	public String insertProduct(ProductVO product) {
 		return service.insertProduct(product);
 	}
+
+	@RequestMapping(value = "/auction/getMPtest" , method = RequestMethod.GET)
+	public String marketPriceTest() {
+		return "/auction/marketPriceTest";
+	}
 }
