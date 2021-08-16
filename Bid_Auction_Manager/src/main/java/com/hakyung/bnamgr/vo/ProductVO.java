@@ -2,9 +2,9 @@ package com.hakyung.bnamgr.vo;
 
 public class ProductVO {
 
-	int p_num, p_kind, p_min_price, max_party, current_party;
+	int p_num, p_kind, p_min_price, max_party, current_party, p_category_code;
     String member_id, p_name, p_indate, p_min_price_op;
-    String product_savedfile, product_originalfile;
+    String product_savedfile, product_originalfile, p_category;
     
 	public int getP_num() {
 		return p_num;
@@ -74,13 +74,28 @@ public class ProductVO {
 	public void setProduct_originalfile(String product_originalfile) {
 		this.product_originalfile = product_originalfile;
 	}
+	public int getP_category_code() {
+		return p_category_code;
+	}
+	public void setP_category_code(int p_category_code) {
+		this.p_category_code = p_category_code;
+	}
+	public String getP_category() {
+		return p_category;
+	}
+	public void setP_category(String p_category) {
+		this.p_category = p_category;
+	}
 	
 	@Override
 	public String toString() {
 		return "ProductVO [p_num=" + p_num + ", p_kind=" + p_kind + ", p_min_price=" + p_min_price + ", max_party="
-				+ max_party + ", current_party=" + current_party + ", member_id=" + member_id + ", p_name=" + p_name
-				+ ", p_indate=" + p_indate + ", p_min_price_op=" + p_min_price_op + ", product_savedfile="
-				+ product_savedfile + ", product_originalfile=" + product_originalfile + "]";
+				+ max_party + ", current_party=" + current_party + ", p_category_code=" + p_category_code
+				+ ", member_id=" + member_id + ", p_name=" + p_name + ", p_indate=" + p_indate + ", p_min_price_op="
+				+ p_min_price_op + ", product_savedfile=" + product_savedfile + ", product_originalfile="
+				+ product_originalfile + ", p_category=" + p_category + "]";
 	}
+	
+	
     
 }
